@@ -1,29 +1,32 @@
 # martin-fowler-refactoring-2nd
-Practice refactoring techniques in the Martin Fowler's Refactoring 2nd edition
+Martin Fowler의 Refactoring 2판을 연습합니다.
 
 ## Yarn
 
-This project is dependent on the package manager [Yarn](https://yarnpkg.com/en/docs/install).
-You need to install it before you can set up the project
+이 프로젝트는 [Yarn](https://yarnpkg.com/en/docs/install) package manager에 의존하고 있습니다.
 
-## If you want to simply set up a JS project from scratch where you can write JS code, tests and run the test
+프로젝트를 세팅하기 이전에 Yarn을 설치해주세요
 
-Create a root directory on your computer for your project. In the root directory of your project, 
-run the following commands:
+## JS 코드를 작성할수 있는 조건하에 전체가 아닌 일부의 코드를 테스트 할수있는 간단한 JS Project를 직접 세팅할수 있습니다.
+
+프로젝트를 위한 여러분컴퓨터 아무곳에나 Root Directory를 생성하세요.
+
+그리고 여러분의 프로젝트의 Root Directory에서 다음의 명령을 실행하세요.
 
 ``` sh
  yarn init
  yarn add --save-dev mocha chai babel-register babel-preset-es201
 ```
 
-Open up package.json and set your test script to the following: 
-
+`package.json`을 열어서 `test script`를 아래와 같이 작성하세요
+``` javascript
   "scripts": {
     "test": "mocha --watch --recursive --require babel-core/register"
   },
-
+```  
 
 Create a .babelrc file in the project directory:
+Project directory `.babelrc`파일을 생성하시고 다음의 내용을 추가해주세요
 
 ```
 {
@@ -34,17 +37,19 @@ Create a .babelrc file in the project directory:
 
 ## Set up project: 
 
-This project is dependent on the package manager [Yarn](https://yarnpkg.com/en/docs/install).
+## Project 세팅
 
-In the root directory of your project, run the following commands:
+이 프로젝트는 [Yarn](https://yarnpkg.com/en/docs/install) package manager에 의존하고 있습니다.
+
+Project의 Root Directory에서 다음의 명령어를 실행하세요
 
 ``` sh
  yarn
 ```
 
-## Run tests:
+## 테스트 실행
 
-In the root directory of your project, run the following commands:
+Project의 Root Directory에서 다음의 명령어를 실행하세요
 
 ``` sh
   yarn test
@@ -52,7 +57,7 @@ In the root directory of your project, run the following commands:
 
 ## Setup JetBrain's WebStorm to run test:
 
-In the run configuration dialog have the following line for the Node options field:
+Configuration 창에서 다음을 Node options에 추가해주세요
 
 ```
 -r babel-register
